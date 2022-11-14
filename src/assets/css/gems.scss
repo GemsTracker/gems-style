@@ -15,7 +15,7 @@ $link-decoration: none;
 $link-hover-decoration: underline;
 $btn-transition: none;
 
-@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
 @import 'scss/variables.scss';
 
 @import 'scss/basic-layout.scss';
