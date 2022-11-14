@@ -1,0 +1,19 @@
+table.browser > tbody > tr {
+  &.ui-sortable-handle {
+    &:hover > td {
+      cursor: move;
+    }
+    /* 
+        In our tables we first have a show button, then the sort order
+        When sorting, the order is no longer important, only confusing so 
+        just make it transparent
+    */ 
+    > *:nth-child(2) {
+      color: transparent;
+    }   
+  }    
+  &.ui-sortable-placeholder > td {
+    height: 4em;
+    background: yellow;
+  }
+}

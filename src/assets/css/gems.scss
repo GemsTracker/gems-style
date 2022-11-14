@@ -1,0 +1,39 @@
+@use "sass:map";
+
+$primary: #167c85;
+$secondary: #1a355d;
+$logo-offset-x: 0px;
+$logo-offset-y: 0px;
+$logo-file: url('images/logo.png');
+$logo-width: 300px;
+$logo-height: 80px;
+
+// Links
+$link-color: $primary;
+$link-hover-color: $secondary;
+$link-decoration: none;
+$link-hover-decoration: underline;
+$btn-transition: none;
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import 'scss/variables.scss';
+
+@import 'scss/basic-layout.scss';
+@import 'scss/buttons.scss';
+@import 'scss/calendar.scss';
+@import 'scss/clipboard.scss';
+@import 'scss/compliance.scss';
+@import 'scss/font-awesome.scss';
+@import 'scss/forms.scss';
+@import 'scss/helpers.scss';
+@import 'scss/jquery-ui.scss';
+@import 'scss/jquery-ui-sortable.scss';
+@import 'scss/links.scss';
+@import 'scss/locale.scss';
+@import 'scss/menu.scss';
+@import 'scss/pagination.scss';
+@import 'scss/tables.scss';
+@import 'scss/trafficlight.scss';
+
+
+

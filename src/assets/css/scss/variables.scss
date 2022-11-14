@@ -1,0 +1,84 @@
+$gray-light2: lighten($black, 80%);
+
+// basic layout
+$body-background-color: white;
+$top-header-background-color: white;
+$top-header-text-color: $body-color;
+
+$header-menu-background-color: $primary;
+$header-menu-text-color: white;
+
+$footer-height: 40px;
+$footer-background-color: $primary;
+$footer-text-color: white;
+
+//
+$border-radius-base: 2px;
+
+
+// Buttons
+// $btn-border-radius-base
+$btn-border-size: 1px;
+$btn-box-shadow: 1px 1px 1px 0px rgba(0,0,0,.45);
+
+$btn-border-padding-vertical: $btn-padding-y;
+$btn-border-padding-horizontal: $btn-padding-x;
+
+$btn-text-color: white;
+$btn-background-color: $primary;
+$btn-border-color: $btn-background-color;
+
+$btn-disabled-text-color: $body-color;
+$btn-disabled-background-color: lighten($black, 80%);
+$btn-disabled-border-color: $btn-disabled-background-color;
+
+$btn-hover-text-color: white;
+$btn-hover-background-color: $secondary;
+$btn-hover-border-color: $btn-hover-background-color;
+
+$btn-transition: none;
+
+
+// Forms
+$form-row-background-color-odd: white;
+$form-row-background-color-even: $table-striped-bg;
+
+// Links
+$link-color: $primary;
+$link-hover-color: $secondary;
+$link-decoration: none;
+$link-hover-decoration: underline;
+
+// Menu
+$menu-width: 200px;
+$menu-link-color: $secondary;
+$menu-active-link-color: white;
+$menu-active-background-color: $secondary;
+$menu-hover-link-color: $secondary;
+$menu-hover-background-color: white;
+$menu-background-color: white;
+
+$header-menu-link-color: $header-menu-text-color;
+$header-menu-active-link-color: white;
+$header-menu-active-background-color: $secondary;
+$header-menu-hover-link-color: white;
+$header-menu-hover-background-color: transparent;
+
+$menu-colapse-animation-speed: .15s;
+
+// Tables
+
+$table-text-color: $body-color;
+
+$table-background-color-odd: white;
+$table-text-color-odd: $table-text-color;
+$table-background-color-even: $table-striped-bg;
+$table-text-color-even: $table-text-color;
+$table-background-color-hover: map.get($table-variants, "info");
+$table-text-color-hover: $table-text-color;
+
+$table-head-text-color: white;
+$table-head-background-color: $secondary;
+$table-head-link-color: white;
+
+$table-selected-column-color: $primary;

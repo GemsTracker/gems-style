@@ -1,0 +1,50 @@
+/* Links */
+a {
+  color: $link-color;
+  &:hover {
+    color: $link-hover-color;
+  }
+
+  /*If font awesome is enabled */
+  &[href^="mailto:"]::after {
+    content: " \f003";
+    color: black;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 1.2em;
+  }
+
+  /*If font awesome is enabled */
+  &.globe::after {
+    content: " \f0ac";
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 1.2em;
+  }
+
+  /*If font awesome is enabled */
+  &.pdf::after {
+    content: " \f1c1";
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 1.2em;
+    color: red;
+  }
+
+  /*If font awesome is enabled */
+  &.excel::after {
+    content: " \f1c3";
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 1.2em;
+    color: green;
+  }
+
+  /*If font awesome is enabled */
+  &.word::after {
+    content: " \f1c2";
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 1.2em;
+    color: white;
+  }
+
+  img.file-icon {
+    margin-left: 4px;
+  }
+}

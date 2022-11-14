@@ -1,0 +1,41 @@
+/* compliance */
+table.compliance {
+  tbody > tr > td {
+    vertical-align: middle;
+  }
+  tbody > tr > td.nextRound {
+    font-weight: bold;
+    vertical-align: top;
+  }
+
+  .rounds {
+    overflow: hidden;
+    white-space: pre;
+  }
+
+  td, th {
+    span.fa-stack {
+      font-size: .7em;
+    }
+    a .answered, span.answered { color: $success !important;}
+    a .missed, span.missed { color: $danger !important;}
+    a .incomplete, span.incomplete { color: darken($danger, 10%) !important;}
+    a .open, span.open { color: $warning !important;}
+    a .partial, span.partial { color: lighten($warning, 10%) !important;}
+    a .unknown, span.unknown { color: $info;}
+    a .waiting, span.waiting { color: darken($info, 20%) !important;}
+    a .empty, span.empty { color: $danger !important;}
+  }
+
+  td.newRound, th.newRound {
+    border-left-width: 3px;
+  }
+
+  td.round, th.round {
+    text-align: center;
+    width: 2em;
+    max-width: 2em;
+    overflow: hidden;
+    min-width: 2em;
+  }
+}

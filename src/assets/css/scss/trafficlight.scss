@@ -1,0 +1,355 @@
+// USES
+// $warning;
+// $primary;
+// $font-size-small;
+// $state-info-text;
+// $info;
+// $success;
+// $warning;
+// $danger;
+// $font-size-h3;
+// $headings-color;
+
+//_mixins
+@mixin zpbordercolor($background, $border, $striped: false) {
+  @if ($striped == true) {
+    background: linear-gradient($background, $background),
+      repeating-linear-gradient(
+        45deg,
+        $border,
+        $border 10px,
+        fade($border, 10%) 10px,
+        fade($border, 10%) 20px
+      );
+  }
+
+  @if ($striped == false) {
+    background: linear-gradient($background, $background),
+      linear-gradient($border, $border);
+  }
+
+  background-attachment: padding-box, border-box;
+  padding: 0px 0px 0px 1em;
+  background-origin: content-box, padding-box;
+  background-clip: content-box, padding-box;
+}
+
+@mixin add-colors-in-zp() {
+  color: whitesmoke;
+  &.answered {
+    background-color: $success;
+  }
+  &.open {
+    color: $primary;
+    background-color: $warning;
+  }
+  &.missed {
+    background-color: $danger;
+  }
+  &.waiting {
+    color: $primary;
+    background-color: $info;
+  }
+}
+
+@mixin border-radius($radius: 5px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+@mixin cursor-hand {
+  cursor: pointer;
+}
+@mixin drop-shadow($x: 0, $y: 2px, $blur: 1px, $spread: 0, $alpha: 0.5) {
+  -webkit-box-shadow: $x $y $blur $spread rgba(12, 32, 116, $alpha);
+  -moz-box-shadow: $x $y $blur $spread rgba(12, 32, 116, $alpha);
+  box-shadow: $x $y $blur $spread rgba(12, 32, 116, $alpha);
+}
+// end mixins
+
+div.loading {
+  /*background: url('../local/ajax-loader.gif'); */
+  background-position: center;
+  width: 10em;
+  height: 10em;
+  background-repeat: no-repeat;
+}
+
+.traject {
+  .progress {
+    width: 25em;
+    margin-top: -1.5em;
+    margin-bottom: 0em;
+    @include drop-shadow();
+    @include border-radius(5px);
+
+    .progress-bar {
+      opacity: 0.75;
+      font-weight: bold;
+      overflow: hidden;
+
+      @include add-colors-in-zp();
+    }
+  }
+
+  &.panel {
+    margin-bottom: 1.5em;
+  }
+
+  .panel-heading {
+    padding: 15px 10px;
+
+    .title {
+      @include cursor-hand();
+      text-transform: uppercase;
+    }
+
+    .panel-title {
+      font-size: 1.5em;
+      text-transform: none;
+
+      .fa-fw.icon-danger {
+        color: #b90000;
+        margin-left: -calc(18em / 14);
+      }
+    }
+
+    .editIcon {
+      font-size: 1.5em;
+      margin-top: -1.3em;
+    }
+
+    .description,
+    .otherOrg {
+      font-style: italic;
+      font-size: 0.66em;
+      text-transform: none;
+
+      .deleteIcon {
+        margin-top: -0.3em;
+        font-size: 1.5em;
+      }
+    }
+
+    .description {
+      display: inline-block;
+    }
+  }
+
+  .panel-body {
+    padding: 20px 0px;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+
+  .objecten {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 0 10px;
+    min-width: 200%;
+    width: 15000px;
+  }
+
+  .object {
+    h5,
+    h6 {
+      margin-top: 5px;
+      margin-bottom: 7px;
+    }
+    h5 {
+      @include cursor-hand();
+      line-height: 0.8em;
+      height: 42px;
+      span {
+        padding-right: 5px;
+      }
+    }
+
+    &.today {
+      background-color: lightgoldenrodyellow;
+      border: 2px solid $warning;
+    }
+
+    width: 250px;
+    border: 1px solid $secondary;
+    background-color: #fff;
+    padding: 10px 10px 0 10px;
+    margin-right: 20px;
+    @include border-radius();
+    float: left;
+
+    div.actor {
+      border-top: 1px solid $primary;
+      padding: 10px 0 0 0;
+      clear: both;
+      h6 {
+        @include cursor-hand();
+        padding-bottom: 7px; //10px;
+        span {
+          padding-right: 5px;
+        }
+      }
+
+      .zplegenda {
+        margin: 0 0 40px 0;
+        background-color: #fff;
+        font-size: $font-size-sm;
+        color: $info;
+        text-align: center;
+        width: 100%;
+        opacity: 0.75;
+        // @include drop-shadow();
+        @include cursor-hand();
+        div {
+          /*background-color: $secondary-25p;*/
+          padding: 2px;
+          @include border-radius(5px);
+          margin-bottom: 11px;
+          margin-right: 0%;
+          width: 100%;
+          float: left;
+          @include drop-shadow();
+          @include add-colors-in-zp(
+
+          ); // _mixins.less where the colors are defined
+        }
+
+        /* one item */
+        div:first-child:nth-last-child(1) {
+          margin-right: 0%;
+          width: 100%;
+        }
+
+        /* two items */
+        div:first-child:nth-last-child(2),
+        div:first-child:nth-last-child(2) ~ div {
+          width: 48%;
+          margin-right: 2%;
+        }
+
+        /* three items */
+        div:first-child:nth-last-child(3),
+        div:first-child:nth-last-child(3) ~ div {
+          width: 31.3333%;
+          margin-right: 2%;
+        }
+
+        /* four items */
+        div:first-child:nth-last-child(4),
+        div:first-child:nth-last-child(4) ~ div {
+          width: 23%;
+          margin-right: 2%;
+        }
+
+        /* five items */
+        div:first-child:nth-last-child(5),
+        div:first-child:nth-last-child(5) ~ div {
+          width: 18%;
+          margin-right: 2%;
+        }
+
+        p {
+          margin: 0 0 0 0 !important;
+        }
+        clear: both;
+      }
+
+      .zpitems {
+        padding: 0;
+        margin: 0;
+      }
+
+      .zpitem {
+        word-wrap: break-word;
+        a {
+          color: $primary;
+        }
+        p {
+          margin: 0 0 0 0 !important;
+        }
+
+        .tokenwrapper {
+          padding: 5px; // 10px;
+          background-color: whitesmoke;
+          color: $primary;
+          border-top-right-radius: inherit;
+          border-bottom-right-radius: inherit;
+        }
+
+        margin: 0 0 10px 0;
+        @include border-radius();
+        @include drop-shadow();
+        @include cursor-hand();
+
+        &.answered {
+          @include zpbordercolor(whitesmoke, $success);
+        }
+        &.open {
+          color: $primary;
+          @include zpbordercolor(whitesmoke, $warning);
+        }
+        &.partial {
+          color: $primary;
+          @include zpbordercolor(whitesmoke, $warning, true);
+        }
+        &.incomplete {
+          @include zpbordercolor(whitesmoke, $danger, true);
+        }
+        &.missed {
+          @include zpbordercolor(whitesmoke, $danger);
+        }
+        &.waiting {
+          color: $primary;
+          @include zpbordercolor(whitesmoke, $info);
+        }
+
+        float: left;
+        width: 100%;
+
+        &.disabled {
+          cursor: not-allowed;
+        }
+
+        .tools {
+          .dropdown-menu {
+            z-index: $zindex-tooltip + 10; // Make sure we go over the tooltip
+          }
+          float: right;
+          line-height: 1.5em;
+          margin-left: 0.5em;
+
+          .dropdown .fa.dropdown-toggle {
+            color: fade($info, 20%);
+            font-size: 1.1em;
+          }
+          .dropdown .fa.dropdown-toggle:hover,
+          .dropdown.open .fa.dropdown-toggle {
+            color: $info;
+            cursor: pointer;
+          }
+
+          img.icon {
+            margin-left: 0.5em;
+            float: right;
+          }
+        }
+      }
+    }
+  }
+
+  &.deleted {
+    opacity: 0.7;
+  }
+}
+
+.modal-dialog {
+  /*width: 600px;*/
+  width: 90%;
+  .modal-body {
+    overflow: auto;
+  }
+}

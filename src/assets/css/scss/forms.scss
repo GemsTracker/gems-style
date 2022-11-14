@@ -1,0 +1,171 @@
+/* forms */
+input {
+    &.disabled {
+        color: #737373;
+        font-style: italic;
+    }
+    &[disabled] {
+        color: black;
+        background: $input-disabled-bg;
+        font-style: italic;
+    }
+    &[readonly] {
+        background: $input-disabled-bg;
+    }
+    &.token_copy {
+        @extend .form-control;
+        width: auto;
+        background-color: $input-disabled-bg;
+        opacity: 1;
+    }
+}
+
+/* Tab forms */
+form div.tab-pane {
+    border: 1px solid #ddd;
+    padding-top: 2em;
+    border-top: none;
+}
+
+select.form-control {
+    @extend .form-select;
+}
+
+/* for datepickers */
+.form-horizontal {
+    .form-group {
+        .input-group label { float:none;}
+    }
+}
+
+label.required::after {
+    content: " *";
+    color: red;
+}
+
+/* fix for checkboxes without label wrapped around it */
+.checkbox-extlabel input[type=checkbox] {
+    margin-left: 0px;
+}
+.checkbox-extlabel .help-block {
+    margin-top: 20px;
+}
+
+.taberror a, .taberror a span {
+    color: #DD0000;
+}
+
+.form-horizontal {
+  .form-group {
+    margin-bottom: 0;
+    padding: 3px 0;
+
+    @include make-row();
+
+    &:nth-child(odd) {
+      background-color: $form-row-background-color-odd;
+    }
+    &:nth-child(even) {
+      background-color: $form-row-background-color-even;
+    }
+
+    label, .label-container {
+      @include make-col-ready();
+      @include media-breakpoint-up(sm) {
+        @include make-col(2);
+      }
+    }
+    label.checkbox {
+        text-align: left;
+        width: 100%;
+    }
+    label.radio-inline {
+        width: auto;
+    }
+    .element-container {
+      @include make-col-ready();
+      @include media-breakpoint-up(sm) {
+        @include make-col(10);
+      }
+        
+        label {
+            width: auto;
+            float: none;
+            
+            input[type="checkbox"] { 
+                margin-right: .5em; 
+            }
+        }
+
+        .input-group-addon {
+            display: table-cell;
+
+        }
+
+    }
+    .element-container-labelless {
+      @include make-col-ready();
+      @include media-breakpoint-up(sm) {
+        @include make-col(10);
+        @include make-col-offset(2)
+      }
+    }
+    .element-container-wide {
+      @include make-col-ready();
+      @include media-breakpoint-up(sm) {
+        @include make-col(12);
+      }
+    }
+    
+    label {
+      display: inline-block;
+      text-align: right;
+    }
+
+    .form-control {
+        width: auto;
+        display: inline-block;
+    }
+
+    .help-block {
+      display: inline-block;
+    }
+  }
+}
+
+.form-inline {
+    br {
+        line-height: 2.5;
+    }
+    .input-group, .form-control {
+        margin-right: 6px;
+        margin-left: 3px;
+        margin-bottom: 3px;
+        width: auto;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .help-block {
+      display: inline-block;
+      margin: 0 1em;
+    }
+
+    input[type=checkbox] {
+        margin-right: .5em;
+    }
+}
+
+.login-form label.required::after {
+    content: "";
+}
+
+.ask-token-form label.required::after {
+  content: "";
+}
+
+#grs_address_2-element {
+  @include make-col-ready();
+  @include media-breakpoint-up(sm) {
+    @include make-col-offset(2)
+  }
+}
