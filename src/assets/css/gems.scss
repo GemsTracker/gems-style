@@ -1,22 +1,9 @@
 @use "sass:map";
 
-$primary: #167c85;
-$secondary: #1a355d;
-$logo-offset-x: 0px;
-$logo-offset-y: 0px;
-$logo-file: url('images/logo.png');
-$logo-width: 300px;
-$logo-height: 80px;
-
-// Links
-$link-color: $primary;
-$link-hover-color: $secondary;
-$link-decoration: none;
-$link-hover-decoration: underline;
-$btn-transition: none;
+@import 'scss/base-variables.scss';
 
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
-@import 'scss/variables.scss';
+@import 'scss/bootstrap-based-variables.scss';
 
 @import 'scss/basic-layout.scss';
 @import 'scss/buttons.scss';
