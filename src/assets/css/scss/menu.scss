@@ -39,8 +39,10 @@
     width: $menu-width;
     float: left;
     margin-top: 2em;
+    margin-left: -1.5rem;
     background-color: $menu-background-color;
     .nav {
+        margin-left: 1.5rem;
         > li { 
             > a {
                 display: block;
