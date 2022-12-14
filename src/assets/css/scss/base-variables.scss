@@ -1,14 +1,80 @@
-$primary: #167c85;
-$secondary: #1a355d;
-$logo-offset-x: 0px;
-$logo-offset-y: 0px;
-$logo-file: none;
-$logo-width: 300px;
-$logo-height: 80px;
+:root {
+  --bs-primary: #167c85;
+  --bs-secondary: #1a355d;
 
-// Links
-$link-color: $primary;
-$link-hover-color: $secondary;
-$link-decoration: none;
-$link-hover-decoration: underline;
-$btn-transition: none;
+  --gems-gray-light: lighten(rgb(0,0,0, 80%));
+
+  --gems-logo-offset-x: 0px;
+  --gems-logo-offset-y: 0px;
+  --gems-logo-file: none;
+  --gems-logo-width: 300px;
+  --gems-logo-height: 80px;
+
+  --gems-body-color: var(--bs-body-color);
+  --gems-body-background: var(--bs-body-bg);
+
+
+  // Links
+  --gems-link-color: var(--bs-primary);
+  --gems-link-hover-color: var(--bs-secondary);
+  --gems-link-decoration: none;
+  --gems-link-hover-decoration: underline;
+  --gems-btn-transition: none;
+
+
+
+  // footer
+  --gems-footer-height: 40px;
+  --gems-footer-background: var(--bs-primary);
+  --gems-footer-color: white;
+
+  // Menu
+  --gems-menu-width: 200px;
+
+  // Buttons
+  --gems-btn-border-radius: var(--bs-border-radius);
+  --gems-btn-border-size: 1px;
+  --gems-box-shadow: 1px 1px 1px 0px rgba(0,0,0,.45);
+
+  --gems-btn-text-color: white;
+  --gems-btn-background-color: var(--bs-primary);
+  --gems-btn-border-color: var(--gems-background-color);
+
+  --gems-disabled-text-color: var(--bs-body-color);
+  --gems-disabled-background-color: var(--gems-gray-light);
+  --gems-disabled-border-color: --gems-disabled-background-color;
+
+  --gems-hover-text-color: white;
+  --gems-hover-background-color: var(--bs-secondary);
+  --gems-hover-border-color: --gems-hover-background-color;
+
+  // Menu
+  --gems-menu-width: 200px;
+  --gems-menu-link-color: var(--bs-secondary);
+  --gems-menu-active-link-color: white;
+  --gems-menu-active-background-color: var(--bs-secondary);
+  --gems-menu-hover-link-color: var(--bs-secondary);
+  --gems-menu-hover-background-color: white;
+  --gems-menu-background-color: white;
+
+  --gems-header-menu-link-color: var(--gems-header-menu-text-color);
+  --gems-header-menu-active-link-color: white;
+  --gems-header-menu-active-background-color: var(--bs-secondary);
+  --gems-header-menu-hover-link-color: white;
+  --gems-header-menu-hover-background-color: transparent;
+
+  --gems-menu-colapse-animation-speed: .15s;
+
+  // Tables
+
+  --gems-table-text-color: var(--bs-body-color);
+
+  --gems-table-text-color-odd: var(--gems-table-text-color);
+  --gems-table-text-color-even: var(--gems-table-text-color);
+  --gems-table-text-color-hover: var(--gems-table-text-color);
+  --gems-table-head-text-color: white;
+  --gems-table-head-background-color: var(--bs-secondary);
+  --gems-table-head-link-color: white;
+
+  --gems-table-selected-column-color: var(--bs-primary);
+}

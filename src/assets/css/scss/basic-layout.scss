@@ -7,26 +7,22 @@ body {
 }
 #container {
   min-height:100%;
-  position:relative;
+  position: relative;
 }
 
 #container > .content {
-  display: table;
-  table-layout: fixed;
+  display: flex;
   width: 100%;
-  margin-bottom: $footer-height;
+  margin-bottom: var(--gems-footer-height);
   padding-bottom: 20px;
 }
 
 #main-container {
-  display: table-cell;
   &.include-menu {
     float: right;
     width: 100%;
-    margin-left: -$menu-width;
     #main {
       padding: 2rem;
-      margin-left: $menu-width;
     }
   }
 }
@@ -36,10 +32,10 @@ header {
   @extend .justify-content-between;
 
   .logo {
-    width: $logo-width;
-    height: $logo-height;
+    width: var(--gems-logo-width);
+    height: var(--gems-logo-height);
     @extend .col-sm-3;
-    background: $logo-file $logo-offset-x $logo-offset-y no-repeat;
+    background: var(--gems-logo-file) var(--gems-logo-offset-x) var(--gems-logo-offset-y) no-repeat;
   }
   .description {
     @extend .col;
@@ -54,7 +50,7 @@ header {
 
   .login-status {
     display: inline-block;
-    border-right: $gray-light2 1px solid;
+    border-right: var(--gems-gray-light) 1px solid;
     padding: 10px 10px 0px 10px;
     vertical-align: top;
     .logout {
@@ -68,8 +64,8 @@ header {
 }
 
 body {
-  background-color: $body-background-color;
-  color: $body-color;
+  background-color: var(--gems-body-background);
+  color: var(--gems-body-color);
 }
 
 .tab-pane {
@@ -89,12 +85,12 @@ footer {
   z-index: 10;
   bottom:0;
   width:100%;
-  height: $footer-height;   /* Height of the footer */
-  background: $footer-background-color;// url('../images/dots-footer-background.png') no-repeat -335px -175px;
-  color: $footer-text-color;
+  height: var(--gems-footer-height);   /* Height of the footer */
+  background: var(--gems-footer-background);
+  color: var(--gems-footer-text-color);
   a {
     margin: 1em;
-    color: $footer-text-color;
+    color: var(--gems-footer-color);
     text-decoration: underline;
   }
   overflow: hidden;

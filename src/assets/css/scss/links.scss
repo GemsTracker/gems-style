@@ -1,8 +1,10 @@
 /* Links */
 a {
-  color: $link-color;
+  color: var(--gems-link-color);
+  text-decoration: none;
   &:hover {
-    color: $link-hover-color;
+    color: var(--gems-link-hover-color);
+    text-decoration: underline;
   }
 
   /*If font awesome is enabled */

@@ -2,16 +2,17 @@
 .btn {
   // Default size
   @extend .btn-sm;
+  color: white;
 
-  border-radius: $btn-border-radius;
-  border-width: $btn-border-size;
-  padding: $btn-border-padding-vertical $btn-border-padding-horizontal;
-  box-shadow: $btn-box-shadow;
+  border-radius: var(--gems-btn-border-radius);
+  border-width: var(--gems-btn-border-size);
+  padding: $btn-padding-y $btn-padding-x;
+  box-shadow: var(--gems-box-shadow);
   &.btn-sm {
-    border-radius: $btn-border-radius;
-    border-width: $btn-border-size;
-    padding: $btn-border-padding-vertical $btn-border-padding-horizontal;
-    box-shadow: $btn-box-shadow;
+    border-radius: var(--gems-btn-border-radius);
+    border-width: var(--gems-btn-border-size);
+    padding: $btn-padding-y $btn-padding-x;
+    box-shadow: var(--gems-box-shadow);
   }
 
   .icon {
@@ -19,9 +20,9 @@
     padding-right: 4px;
   }
 
-  color: $btn-text-color;
-  background-color: $btn-background-color;
-  border-color: $btn-border-color;
+  color: var(--gems-btn-text-color);
+  background-color: var(--bs-primary, $btn-background-color);
+  border-color: var(--bs-primary, $btn-border-color);
   margin-bottom: 0.5em;
 
   // Reevaluate custom overwrites of the default value
@@ -71,8 +72,9 @@
   &:active,
   &.active {
     color: $btn-hover-text-color;
-    background-color: $btn-hover-background-color;
-    border-color: $btn-hover-border-color;
+    background-color: var(--bs-secondary, $btn-hover-background-color);
+    border-color: var(--bs-secondary, $btn-hover-border-color);
+    text-decoration: none;
   }
 }
 

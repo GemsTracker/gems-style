@@ -21,46 +21,46 @@
 
 #menu {
     .nav>li>a {
-        color: $menu-link-color;
+        color: var(--gems-menu-link-color);
     }
     .nav>li.active>a {
-        color: $menu-active-link-color;
+        color: var(--gems-menu-active-link-color);
     }
     .nav>li>a:hover {
-        background-color: $menu-hover-background-color;
+        background-color: var(--gems-menu-hover-background-color);
     }
     .navbar-default {
-        background-color: $menu-background-color;
+        background-color: var(--gems-menu-background-color);
     }
 }
 
 #menu {
     display: table-cell;
-    width: $menu-width;
+    width: var(--gems-menu-width);
     float: left;
     margin-top: 2em;
     margin-left: -1.5rem;
-    background-color: $menu-background-color;
+    background-color: var(--gems-menu-background-color);
     .nav {
         margin-left: 1.5rem;
         > li { 
             > a {
                 display: block;
-                color: $menu-link-color;
+                color: var(--gems-menu-link-color);
                 padding: 2px;
                 font-weight: bold;
                 &:hover {
-                    background-color: $menu-hover-background-color;
-                    color: $menu-hover-link-color;
+                    background-color: var(--gems-menu-hover-background-color);
+                    color: var(--gems-menu-hover-link-color);
                     text-decoration: underline;
                 }
             }
             &.active > a {
-                color: $menu-active-link-color;
-                background: $menu-active-background-color;
+                color: var(--gems-menu-active-link-color);
+                background: var(--gems-menu-active-background-color);
 
                 &:hover {
-                    background: $menu-active-background-color;
+                    background: var(--gems-menu-active-background-color);
                     text-decoration: underline;                     
                 }
             }
@@ -72,7 +72,7 @@
         font-weight: normal;
     }
     .navbar-default {
-        background-color: $menu-background-color;
+        background-color: var(--gems-menu-background-color);
     }
 }
 
@@ -82,36 +82,36 @@ header {
         margin-top: 25px;
         display: block;
         width: 100%;
-        background-color: $header-menu-background-color;
+        background-color: var(--gems-menu-background-color);
         .nav {
             text-align: center;
-            background-color: $header-menu-background-color;
+            background-color: var(--gems-menu-background-color);
             > li {
                 margin: 0;
                 display: inline-block;
                 >a {
-                    color: $header-menu-link-color;
+                    color: var(--gems-menu-link-color);
                     font-size: 16px;
                     padding: 13px 20px;
                     &:hover {
-                        background-color: $header-menu-hover-background-color;
-                        color: $header-menu-hover-link-color;
+                        background-color: var(--gems-menu-hover-background-color);
+                        color: var(--gems-menu-hover-link-color);
                         text-decoration: underline;
                     }
                     &:active, &:focus {
                         background: none;
-                        color: $header-menu-link-color;
+                        color: var(--gems-menu-link-color);
                     }
                 }
                 &.active > a {
-                    background: $header-menu-active-background-color;
-                    color: $header-menu-active-link-color;
+                    background: var(--gems-menu-active-background-color);
+                    color: var(--gems-menu-active-link-color);
                 }
             }
         }
         
         .navbar-default {
-            background-color: $header-menu-background-color;
+            background-color: var(--gems-header-menu-background-color);
         }
     }
 
@@ -125,7 +125,7 @@ header {
         overflow: auto;
         -webkit-overflow-scrolling: touch;
         transform: translateX(-105%);
-        animation-duration: $menu-colapse-animation-speed;
+        animation-duration: var(--gems-menu-colapse-animation-speed);
         animation-timing-function: ease-out;
         animation-fill-mode: forwards;
         animation-name: menuSlideOut;
@@ -144,7 +144,7 @@ header {
         position: absolute;
         z-index: 998;
         
-        animation-duration: $menu-colapse-animation-speed;
+        animation-duration: var(--gems-menu-colapse-animation-speed);
         animation-timing-function: ease-out;
         animation-name: fadeOut;
         &.active {
@@ -158,10 +158,10 @@ header {
         z-index: 1000;
         top: 7px;
         left: 9px;
-        color: $header-menu-link-color;
+        color: var(--gems-header-menu-link-color);
         cursor: pointer;
         &:hover {
-            color: $header-menu-hover-link-color;
+            color: var(--gems-header-menu-hover-link-color);
         }
     }
 }

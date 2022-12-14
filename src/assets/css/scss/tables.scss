@@ -38,7 +38,7 @@ a.sortDescSelected {
     .table-responsive;
 }*/
 
-$table-bg-accent: $table-background-color-even;
+$table-bg-accent: $table-striped-bg;
 
 table {
     &.answers {
@@ -87,47 +87,47 @@ table {
         > tbody {
             > tr {
                 &:nth-child(odd) > td {
-                    color: $table-text-color-even;
+                    color: var(--gems-table-text-color-even);
                 }
                 &:nth-child(even) > td {
-                    color: $table-text-color-odd;
+                    color: var(--gems-table-text-color-odd);
                 }
                 &:hover > td,
                 &:hover > th {
                     background-color: $table-background-color-hover;
-                    color: $table-text-color-hover;
+                    color: var(--gems-table-text-color-hover);
                 }
                 > td {
-                    color: $table-text-color;
+                    color: var(--gems-table-text-color);
                     &.question_sub {
                         padding-left: 1.5em;
                     }
                 }
 
                 &.active > td, &.active > th, > td.active, > th.active {
-                    background-color: $table-active-bg;
+                    background-color: var(--gems-table-active-bg);
                 }
                 &.success > td, &.success > th, > td.succes, > th.success {
-                    background-color: $success;
+                    background-color: var(--bs-success);
                 }
                 &.info > td, &.info > th, > td.info, > th.info {
-                    background-color: $info;
+                    background-color: var(--bs-info);
                 }
                 &.warning > td, &.warning > th, > td.warning, > th.warning {
-                    background-color: $warning;
+                    background-color: var(--bs-warning);
                 }
                 &.danger > td, &.danger > th, > td.danger, > th.danger {
-                    background-color: $danger;
+                    background-color: var(--bs-danger);
                 }
             }
         }
         
         thead tr th, tfoot tr th {
-            color: $table-head-text-color;
-            background: $table-head-background-color;
+            color: var(--gems-table-head-text-color);
+            background: var(--gems-table-head-background-color);
             border-bottom: none;
             a {
-                color: $table-head-link-color;
+                color: var(--gems-table-head-link-color);
             }
         }
 
@@ -142,21 +142,21 @@ table {
 
         tbody, tfoot, thead {
             td.selectedColumn, th.selectedColumn {
-                border-left: 2px solid $table-selected-column-color;
-                border-right: 2px solid $table-selected-column-color;
+                border-left: 2px solid var(--gems-table-selected-column-color);
+                border-right: 2px solid var(--gems-table-selected-column-color);
             }
 
             th.selectedColumn {
-                background-color: $table-selected-column-color;
+                background-color: var(--gems-table-selected-column-color);
             }
         }
 
         thead:first-child tr:first-child th.selectedColumn {
-            border-top: 2px solid $table-selected-column-color;
+            border-top: 2px solid var(--gems-table-selected-column-color);
         }
 
         tfoot th.selectedColumn {
-            border-bottom: 2px solid $table-selected-column-color;
+            border-bottom: 2px solid var(--gems-table-selected-column-color);
         }
     }
 
@@ -237,23 +237,23 @@ table {
 table.timeTable {
     tbody, tfoot, thead {
         td.selectedColumn, th.selectedColumn {
-            border-left: 2px solid $table-selected-column-color;
-            border-right: 2px solid $table-selected-column-color;
+            border-left: 2px solid var(--gems-table-selected-column-color);
+            border-right: 2px solid var(--gems-table-selected-column-color);
         }
 
         th.selectedColumn {
-            background-color: $table-selected-column-color;
+            background-color: var(--gems-table-selected-column-color);
         }
     }
 
     thead:first-child tr:first-child th.selectedColumn {
-        border-top: 2px solid $table-selected-column-color;
-        border-bottom: 2px solid $table-selected-column-color;
+        border-top: 2px solid var(--gems-table-selected-column-color);
+        border-bottom: 2px solid var(--gems-table-selected-column-color);
     }
 
     tfoot td.selectedColumn {
-        background-color: $table-selected-column-color;
-        border-bottom: 2px solid $table-selected-column-color;
+        background-color: var(--gems-table-selected-column-color);
+        border-bottom: 2px solid var(--gems-table-selected-column-color);
     }
 }
 
