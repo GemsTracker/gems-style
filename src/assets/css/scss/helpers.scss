@@ -149,3 +149,7 @@ textarea + p.description {
   background-color: $btn-hover-background-color;
   border-color: $btn-hover-border-color;
 }
+
+.tooltip-container {
+  display: inline-block;
+}
