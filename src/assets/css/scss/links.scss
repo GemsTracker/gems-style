@@ -9,23 +9,32 @@ a {
 
   /*If font awesome is enabled */
   &[href^="mailto:"]::after {
-    content: " \f003";
+    content: " \f0e0";
     color: black;
-    font: normal normal normal 14px/1 FontAwesome;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    font-family: "Font Awesome 6 Free";
     font-size: 1.2em;
   }
 
   /*If font awesome is enabled */
   &.globe::after {
-    content: " \f0ac";
-    font: normal normal normal 14px/1 FontAwesome;
+    content: " \f7a2";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    font-family: "Font Awesome 6 Free";
     font-size: 1.2em;
   }
 
   /*If font awesome is enabled */
   &.pdf::after {
     content: " \f1c1";
-    font: normal normal normal 14px/1 FontAwesome;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    font-family: "Font Awesome 6 Free";
     font-size: 1.2em;
     color: red;
   }
@@ -33,7 +42,11 @@ a {
   /*If font awesome is enabled */
   &.excel::after {
     content: " \f1c3";
-    font: normal normal normal 14px/1 FontAwesome;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    font-family: "Font Awesome 6 Free";
+    font-size: 1.2em;
     font-size: 1.2em;
     color: green;
   }
@@ -41,7 +54,11 @@ a {
   /*If font awesome is enabled */
   &.word::after {
     content: " \f1c2";
-    font: normal normal normal 14px/1 FontAwesome;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    font-family: "Font Awesome 6 Free";
+    font-size: 1.2em;
     font-size: 1.2em;
     color: white;
   }
