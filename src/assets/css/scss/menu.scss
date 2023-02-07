@@ -43,6 +43,9 @@
     background-color: var(--gems-menu-background-color);
     .nav {
         margin-left: 1.5rem;
+        &.closed {
+            display: none;
+        }
         > li { 
             > a {
                 display: block;
@@ -64,7 +67,19 @@
                     text-decoration: underline;                     
                 }
             }
-
+            &.container-link-item {
+                > a:after {
+                    content: " \f054";
+                    color: var(--gems-menu-link-color);
+                    font-weight: 400;
+                    font-family: "Font Awesome 6 Free";
+                    font-size: .5rem;
+                    margin-left: .25rem;
+                }
+                &.open > a:after {
+                    content: " \f078";
+                }
+            }
         }
 
     }
