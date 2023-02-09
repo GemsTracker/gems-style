@@ -76,6 +76,13 @@
                     font-size: .5rem;
                     margin-left: .25rem;
                 }
+                &.active > a:after {
+                    color: var(--gems-menu-active-link-color);
+                    &:hover {
+                        background: var(--gems-menu-active-background-color);
+                        text-decoration: underline;
+                    }
+                }
                 &.open > a:after {
                     content: " \f078";
                 }
