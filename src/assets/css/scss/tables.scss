@@ -12,7 +12,10 @@
 .sortAscSelected,
 .sortDescSelected:hover {
   &:before {
-    @include fa();
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    font-family: "Font Awesome 6 Free";
     content: "\f0d8";
     color: rgb(78,160,223);
     width: 100%;
@@ -24,7 +27,10 @@
 a.sortAscSelected:hover,
 a.sortDescSelected {
   &:before {
-    @include fa();
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    font-family: "Font Awesome 6 Free";
     content: "\f0d7";
     color: rgb(78,160,223);
     width: 100%;
