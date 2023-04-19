@@ -77,4 +77,8 @@
   --gems-table-head-link-color: white;
 
   --gems-table-selected-column-color: var(--bs-primary);
+
+  // Pagination
+  --bs-pagination-active-bg: var(--bs-primary);
+  --bs-pagination-active-border-color: var(--bs-primary);
 }
