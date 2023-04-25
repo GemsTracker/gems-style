@@ -1,11 +1,19 @@
-/* pagination */
-.pagination-index {
-    margin: 20px 0px;
-    /*.pull-right;*/
+.pagination {
+  // Pagination
+  --bs-pagination-active-bg: var(--bs-primary);
+  --bs-pagination-active-border-color: var(--bs-primary);
+  margin: 0;
 }
 
-.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
-    background-color: $btn-background-color;
-    border-color: $btn-border-color;
-    color: $btn-text-color;
+.pagination-index {
+  border: #dee2e6 1px solid;
+  border-radius: .25rem;
+  padding: 0 .5rem;
+  color: #6c757d;
+  .btn-sm {
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0 .5rem;
+    padding: .15rem .5rem;
+  }
 }
