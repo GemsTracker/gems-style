@@ -18,6 +18,9 @@
       }
     }
   }
+  .card-body {
+    overflow-x: auto;
+  }
   .measure-moment {
     width: 15.5rem;
     padding: .5rem;
@@ -233,8 +236,6 @@ div.loading {
     display: flex;
     margin: 0 10px;
     padding: 0 10px;
-    min-width: 200%;
-    width: 15000px;
   }
 
   .object {
@@ -258,12 +259,12 @@ div.loading {
     }
 
     width: 250px;
+    flex-shrink: 0;
     border: 1px solid $secondary;
     background-color: #fff;
     padding: 10px 10px 0 10px;
     margin-right: 20px;
     @include border-radius();
-    float: left;
 
     div.actor {
       border-top: 1px solid $primary;

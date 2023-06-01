@@ -18,9 +18,9 @@ body {
 }
 
 #main-container {
+  min-width: 0px;
+  flex-grow: 1;
   &.include-menu {
-    float: right;
-    width: 100%;
     #main {
       padding: 2rem;
     }
