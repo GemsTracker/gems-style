@@ -55,6 +55,11 @@ label.required::after {
     color: #DD0000;
 }
 
+.radio-inline, .checkbox-inline {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
 .form-horizontal {
   .form-group {
     margin-bottom: 0;
@@ -134,25 +139,33 @@ label.required::after {
 }
 
 .form-inline {
-    br {
-        line-height: 2.5;
+  br {
+    line-height: 2.5;
+  }
+  .form-group {
+    display: inline-block;
+    .button {
+      margin-right: .25rem;
     }
-    .input-group, .form-control {
-        margin-right: 6px;
-        margin-left: 3px;
-        margin-bottom: 3px;
-        width: auto;
-        display: inline-block;
-        vertical-align: middle;
-    }
-    .help-block {
-      display: inline-block;
-      margin: 0 1em;
-    }
+  }
+  .input-group, .form-control {
+    margin-right: 6px;
+    margin-left: 3px;
+    margin-bottom: 3px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+  }
 
-    input[type=checkbox] {
-        margin-right: .5em;
-    }
+
+  .help-block {
+    display: inline-block;
+    margin: 0 1em;
+  }
+
+  input[type=checkbox] {
+    margin-right: .5em;
+  }
 }
 
 .login-form label.required::after {
