@@ -6,8 +6,8 @@
 }
 
 .pagination-index {
-  border: #dee2e6 1px solid;
-  border-radius: .25rem;
+  //border: #dee2e6 1px solid;
+  //border-radius: .25rem;
   padding: 0 .5rem;
   color: #6c757d;
   .btn-sm {
@@ -15,5 +15,13 @@
     box-shadow: none;
     margin: 0 .5rem;
     padding: .15rem .5rem;
+  }
+  .form-inline {
+    display: inline-block;
+    margin: 0;
+    .form-control {
+      @extend .form-control-sm;
+      padding-right: 1rem;
+    }
   }
 }
