@@ -13,12 +13,11 @@ body {
 #container > .content {
   display: flex;
   width: 100%;
-  margin-bottom: var(--gems-footer-height);
   padding-bottom: 20px;
 }
 
 #main-container {
-  min-width: 0px;
+  min-width: 0;
   flex-grow: 1;
   &.include-menu {
     #main {
@@ -51,14 +50,14 @@ header {
   .login-status {
     display: inline-block;
     border-right: var(--gems-gray-light) 1px solid;
-    padding: 10px 10px 0px 10px;
+    padding: 10px 10px 0 10px;
     vertical-align: top;
     .logout {
       margin-left: 1em;
     }
   }
   .language-select {
-    padding: 10px 10px 0px 10px;
+    padding: 10px 10px 0 10px;
     display: inline-block;
   }
 }
