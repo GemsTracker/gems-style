@@ -42,7 +42,6 @@ header {
   }
 
   .tools {
-    @extend .col-sm-3;
     display: flex;
     justify-content: flex-end;
   }
