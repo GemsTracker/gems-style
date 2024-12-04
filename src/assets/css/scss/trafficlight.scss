@@ -60,7 +60,16 @@
           word-wrap: break-word;
           padding: .25rem;
           &.open {
-            border-left: 1rem rgb(255,193,7) solid;
+            border-left: 1rem $warning solid;
+          }
+          &.answered {
+            border-left: 1rem $success solid;
+          }
+          &.missed {
+            border-left: 1rem $danger solid;
+          }
+          &.waiting {
+            border-left: 1rem $info solid;
           }
           .token-utils {
             padding-top: 0.2rem;
