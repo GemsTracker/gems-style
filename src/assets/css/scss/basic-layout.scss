@@ -142,3 +142,16 @@ footer {
 .panel-body {
   @extend .card-body;
 }
+
+.bg-success {
+  background-color: var(--gems-success) !important;
+}
+.bg-info {
+  background-color: var(--gems-info) !important;
+}
+.bg-warning {
+  background-color: var(--gems-warning) !important;
+}
+.bg-danger {
+  background-color: var(--gems-danger) !important;
+}

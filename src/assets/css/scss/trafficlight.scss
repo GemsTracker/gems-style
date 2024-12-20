@@ -37,19 +37,19 @@
           text-align: center;
         }
         .open {
-          background-color: $warning;
+          background-color: var(--gems-warning);
           color: white;
         }
         .answered {
-          background-color: $success;
+          background-color: var(--gems-success);
           color: white;
         }
         .missed {
-          background-color: $danger;
+          background-color: var(--gems-danger);
           color: white;
         }
         .waiting {
-          background-color: $info;
+          background-color: var(--gems-info);
           color: white;
         }
       }
@@ -60,16 +60,16 @@
           word-wrap: break-word;
           padding: .25rem;
           &.open {
-            border-left: 1rem $warning solid;
+            border-left: 1rem var(--gems-warning) solid;
           }
           &.answered {
-            border-left: 1rem $success solid;
+            border-left: 1rem var(--gems-success) solid;
           }
           &.missed {
-            border-left: 1rem $danger solid;
+            border-left: 1rem var(--gems-danger) solid;
           }
           &.waiting {
-            border-left: 1rem $info solid;
+            border-left: 1rem var(--gems-info) solid;
           }
           .token-utils {
             padding-top: 0.2rem;
@@ -94,14 +94,14 @@
 }
 
 // USES
-// $warning;
+// var(--gems-warning;
 // $primary;
 // $font-size-small;
 // $state-info-text;
 // $info;
-// $success;
-// $warning;
-// $danger;
+// var(--gems-success;
+// var(--gems-warning;
+// var(--gems-danger;
 // $font-size-h3;
 // $headings-color;
 
@@ -132,18 +132,18 @@
 @mixin add-colors-in-zp() {
   color: whitesmoke;
   &.answered {
-    background-color: $success;
+    background-color: var(--gems-success);
   }
   &.open {
     color: $primary;
-    background-color: $warning;
+    background-color: var(--gems-warning);
   }
   &.missed {
-    background-color: $danger;
+    background-color: var(--gems-danger);
   }
   &.waiting {
     color: $primary;
-    background-color: $info;
+    background-color: var(--gems-status-bg-info);
   }
 }
 
@@ -209,7 +209,7 @@ div.loading {
 
       .fa-fw.icon-danger {
         color: #b90000;
-        margin-left: -calc(18em / 14);
+        margin-left: -(calc(18em / 14));
       }
     }
 
@@ -264,7 +264,7 @@ div.loading {
 
     &.today {
       background-color: lightgoldenrodyellow;
-      border: 2px solid $warning;
+      border: 2px solid var(--gems-warning);
     }
 
     width: 250px;
@@ -379,25 +379,25 @@ div.loading {
         @include cursor-hand();
 
         &.answered {
-          @include zpbordercolor(whitesmoke, $success);
+          @include zpbordercolor(whitesmoke, var(--gems-success));
         }
         &.open {
           color: $primary;
-          @include zpbordercolor(whitesmoke, $warning);
+          @include zpbordercolor(whitesmoke, var(--gems-warning));
         }
         &.partial {
           color: $primary;
-          @include zpbordercolor(whitesmoke, $warning, true);
+          @include zpbordercolor(whitesmoke, var(--gems-warning), true);
         }
         &.incomplete {
-          @include zpbordercolor(whitesmoke, $danger, true);
+          @include zpbordercolor(whitesmoke, var(--gems-danger), true);
         }
         &.missed {
-          @include zpbordercolor(whitesmoke, $danger);
+          @include zpbordercolor(whitesmoke, var(--gems-danger));
         }
         &.waiting {
           color: $primary;
-          @include zpbordercolor(whitesmoke, $info);
+          @include zpbordercolor(whitesmoke, var(--gems-status-bg-info));
         }
 
         float: left;
