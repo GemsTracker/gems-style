@@ -47,6 +47,8 @@ a.sortDescSelected {
 $table-bg-accent: $table-striped-bg;
 
 table {
+    caption-side: top;
+
     &.answers {
         .conditionQuestion {
             color: #5c5c5c;
