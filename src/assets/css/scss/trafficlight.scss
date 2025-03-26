@@ -1,3 +1,10 @@
+:root {
+  --timeline-answered: --bs-succes;
+  --timeline-missed: var(--bs-danger);
+  --timeline-open: var(--bs-info);
+  --timeline-waiting: var(--bs-warning);
+}
+
 .token-timeline {
   .careplan-timeline-block {
     .card-title {
@@ -37,25 +44,25 @@
           text-align: center;
         }
         .open {
-          background-color: var(--gems-warning);
+          background-color: var(--timeline-open);
           color: white;
         }
         .in-progress {
-          background-color: var(--gems-warning);
+          background-color: var(--timeline-open);
           color: white;
-          background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+          background-image: linear-gradient(135deg, rgba(255, 255, 255, .50) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .50) 50%, rgba(255, 255, 255, .50) 75%, transparent 75%, transparent);
           background-size: 2rem 2rem;
         }
         .answered {
-          background-color: var(--gems-success);
+          background-color: var(--timeline-answered);
           color: white;
         }
         .missed {
-          background-color: var(--gems-danger);
+          background-color: var(--timeline-missed);
           color: white;
         }
         .waiting {
-          background-color: var(--gems-info);
+          background-color: var(--timeline-waiting);
           color: white;
         }
       }
@@ -66,19 +73,20 @@
           word-wrap: break-word;
           padding: .25rem;
           &.open {
-            border-left: 1rem var(--gems-warning) solid;
+            border-left: 1rem var(--timeline-open) solid;
           }
           &.in-progress {
-            border-left: 1rem var(--gems-warning) solid;
+            background-image: linear-gradient(135deg, rgba(255, 255, 255, .50) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .50) 50%, rgba(255, 255, 255, .50) 75%, transparent 75%, transparent);
+            border-left: 1rem var(--timeline-open) solid;
           }
           &.answered {
-            border-left: 1rem var(--gems-success) solid;
+            border-left: 1rem var(--timeline-answered) solid;
           }
           &.missed {
-            border-left: 1rem var(--gems-danger) solid;
+            border-left: 1rem var(--timeline-missed) solid;
           }
           &.waiting {
-            border-left: 1rem var(--gems-info) solid;
+            border-left: 1rem var(--timeline-waiting) solid;
           }
           .token-utils {
             padding-top: 0.2rem;
@@ -141,18 +149,18 @@
 @mixin add-colors-in-zp() {
   color: whitesmoke;
   &.answered {
-    background-color: var(--gems-success);
+    background-color: var(--timeline-answered);
   }
   &.open {
     color: $primary;
-    background-color: var(--gems-warning);
+    background-color: var(--timeline-open);
   }
   &.missed {
-    background-color: var(--gems-danger);
+    background-color: var(--timeline-missed);
   }
   &.waiting {
     color: $primary;
-    background-color: var(--gems-status-bg-info);
+    background-color: var(--timeline-waiting);
   }
 }
 
@@ -388,11 +396,11 @@ div.loading {
         @include cursor-hand();
 
         &.answered {
-          @include zpbordercolor(whitesmoke, var(--gems-success));
+          @include zpbordercolor(whitesmoke, var(--timeline-answered));
         }
         &.open {
           color: $primary;
-          @include zpbordercolor(whitesmoke, var(--gems-warning));
+          @include zpbordercolor(whitesmoke, var(--timeline-open));
         }
         &.partial {
           color: $primary;
@@ -402,11 +410,11 @@ div.loading {
           @include zpbordercolor(whitesmoke, var(--gems-danger), true);
         }
         &.missed {
-          @include zpbordercolor(whitesmoke, var(--gems-danger));
+          @include zpbordercolor(whitesmoke, var(--timeline-missed));
         }
         &.waiting {
           color: $primary;
-          @include zpbordercolor(whitesmoke, var(--gems-status-bg-info));
+          @include zpbordercolor(whitesmoke, var(--timeline-waiting));
         }
 
         float: left;
