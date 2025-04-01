@@ -68,33 +68,51 @@
       }
       .token-items {
         .token-item {
+          margin: 0;
+          padding: 0;
           position: relative;
           overflow: hidden;
           word-wrap: break-word;
-          padding: .25rem;
+
           &.open {
-            border-left: 1rem var(--timeline-open) solid;
+            .token-border {
+              background-color: var(--timeline-open);
+            }
           }
           &.in-progress {
-            background-image: linear-gradient(135deg, rgba(255, 255, 255, .50) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .50) 50%, rgba(255, 255, 255, .50) 75%, transparent 75%, transparent);
-            border-left: 1rem var(--timeline-open) solid;
+            .token-border {
+              background-image: linear-gradient(135deg, rgba(255, 255, 255, .50) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .50) 50%, rgba(255, 255, 255, .50) 75%, transparent 75%, transparent);
+              background-color: var(--timeline-open);
+              background-size: 2rem 2rem;
+            }
           }
           &.answered {
-            border-left: 1rem var(--timeline-answered) solid;
-          }
+            .token-border {
+              background-color: var(--timeline-answered);
+            }
+           }
           &.missed {
-            border-left: 1rem var(--timeline-missed) solid;
+            .token-border {
+              background-color: var(--timeline-missed);
+            }
           }
           &.waiting {
-            border-left: 1rem var(--timeline-waiting) solid;
+            .token-border {
+              background-color: var(--timeline-waiting);
+            }
+          }
+          .tokenwrapper {
+            background-color: whitesmoke;
+            margin: 1px 1px 1px 16px;
           }
           .token-utils {
+            margin-left: auto;
             padding-top: 0.2rem;
             text-align: right;
             .icon, .icon a {
               cursor: pointer;
               margin: .2rem;
-              color: rgba(49, 112, 143, 0.2);
+              color: rgba(49, 112, 143, 0.3);
               &:hover {
                 color: #31708f;
               }
@@ -294,6 +312,7 @@ div.loading {
 
     div.actor {
       border-top: 1px solid $primary;
+      margin-top: 2px;
       padding: 10px 0 0 0;
       clear: both;
       h6 {
