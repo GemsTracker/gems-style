@@ -12,10 +12,52 @@
         z-index: 100;
         position: fixed;
         width: 100%;
-        top: 0px;
+        top: 0;
     }
     #header {
         margin-top: 40px;
+    }
+}
+
+#main-menu {
+    background: var(--gems-footer-background);
+    margin: 0;
+    width: 100%;
+
+    ul {
+        justify-content: center;
+        margin: 0 auto;
+
+        li {
+            display: flex;
+            margin: 0 1em 2px 1em;
+
+            a {
+                font-size: var(--gems-main-menu-font-size);
+                padding: 4px 0.5em;
+            }
+        }
+    }
+    .nav>ul>li {
+        justify-content: left;
+        text-align: left;
+    }
+    .nav>li>a {
+        color: var(--gems-menu-active-link-color);
+    }
+    .nav>li.active>a {
+        color: var(--gems-menu-active-link-color);
+        background: var(--gems-menu-active-background-color);
+    }
+    .nav>li>a:hover {
+        text-decoration: underline;
+    }
+    .navbar-default {
+        background: var(--gems-menu-active-background-color);
+    }
+    .nav>li>ul {
+        display: none;
+        position: absolute;
     }
 }
 
