@@ -3,6 +3,14 @@
     display: none;
 }
 
+@media print
+{
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
+
 .disabled {
     font-style: italic;
 }
