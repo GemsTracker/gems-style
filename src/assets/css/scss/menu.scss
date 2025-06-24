@@ -271,9 +271,6 @@ $grid-float-breakpoint: map.get($grid-breakpoints, 'md');
             display: inline-block;
         }
     }
-    #menu {
-        display: none;
-    }
 }
 
 @media (min-width: ($grid-float-breakpoint+1)) {
