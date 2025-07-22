@@ -1,5 +1,5 @@
 :root {
-  --timeline-answered: --bs-succes;
+  --timeline-answered: var(--bs-success);
   --timeline-missed: var(--bs-danger);
   --timeline-open: var(--bs-info);
   --timeline-waiting: var(--bs-warning);
@@ -306,7 +306,7 @@ div.loading {
     flex-shrink: 0;
     border: 1px solid $secondary;
     background-color: #fff;
-    padding: 10px 10px 0 10px;
+    padding: 10px;
     margin-right: 20px;
     @include border-radius();
 
