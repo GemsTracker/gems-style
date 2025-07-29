@@ -23,6 +23,7 @@ $animation-duration: 0.3s;
     height: 100%;
     z-index: 98;
     overflow-y: auto;
+    position: fixed;
 
     &.show-menu {
       left: 0;
